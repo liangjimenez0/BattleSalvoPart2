@@ -76,9 +76,9 @@ class ShipTest {
     playerShip1.randomizeHorizontal();
     playerShip2.randomizeHorizontal();
 
-    assertFalse(playerShip1.horizontal);
-    assertFalse(playerShip2.horizontal);
-    assertTrue(playerShip3.horizontal);
+    assertFalse(playerShip1.getHorizontal());
+    assertFalse(playerShip2.getHorizontal());
+    assertTrue(playerShip3.getHorizontal());
 
   }
 
@@ -153,10 +153,9 @@ class ShipTest {
   void shipJson() {
     CoordJson c1Json = new CoordJson(0, 0);
     CoordJson c3Json = new CoordJson(2, 2);
+    playerShip2 = new Ship(ShipType.DESTROYER, coordList2, false, new Random(3));
 
     ShipJson ship1Json = new ShipJson(c1Json, 6, Direction.HORIZONTAL);
-
-    playerShip2.horizontal = false;
 
     ShipJson ship2Json = new ShipJson(c3Json, 4, Direction.VERTICAL);
 

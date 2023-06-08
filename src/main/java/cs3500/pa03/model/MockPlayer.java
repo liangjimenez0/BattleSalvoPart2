@@ -10,10 +10,10 @@ import java.util.Random;
  */
 public class MockPlayer implements Player {
 
-  String name;
-  List<Ship> listOfShips;
-  Board playerBoard;
-  Board aiBoard;
+  private final String name;
+  private List<Ship> listOfShips;
+  private final Board playerBoard;
+  private final Board aiBoard;
 
   /**
    * Represents a constructor for a mock player used for testing

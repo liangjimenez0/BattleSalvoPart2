@@ -28,14 +28,14 @@ public class ControllerImp implements Controller {
 
   private final Readable input;
   private final Appendable output;
-  Viewer viewer;
-  Scanner scanner;
-  Player userPlayer;
-  Player aiPlayer;
-  Board playerBoard;
-  Board opponentBoard;
-  GameOver gameOver;
-  Random random;
+  private final Viewer viewer;
+  private final Scanner scanner;
+  private final Player userPlayer;
+  private final Player aiPlayer;
+  private final Board playerBoard;
+  private final Board opponentBoard;
+  private final GameOver gameOver;
+  private final Random random;
 
   /**
    * Constructor to represent an instance of ControllerImpl

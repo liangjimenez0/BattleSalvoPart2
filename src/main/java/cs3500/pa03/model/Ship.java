@@ -10,10 +10,10 @@ import java.util.Random;
  * Represents a ship on a board in the battleship game
  */
 public class Ship {
-  ShipType shipType;
-  ArrayList<Coord> location;
-  boolean horizontal;
-  Random rand;
+  private final ShipType shipType;
+  private final ArrayList<Coord> location;
+  private boolean horizontal;
+  private final Random rand;
 
   /**
    * Constructor used when creating ships in the battleship game
@@ -36,6 +36,15 @@ public class Ship {
    */
   public void randomizeHorizontal() {
     this.horizontal = rand.nextInt(2) == 0;
+  }
+
+  /**
+   * Returns whether this ship is horizontal
+   *
+   * @return a boolean that tells if a ship is horizontal
+   */
+  public boolean getHorizontal() {
+    return this.horizontal;
   }
 
   /**

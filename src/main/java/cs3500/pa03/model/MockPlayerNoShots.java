@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class MockPlayerNoShots implements Player {
 
-  String name;
+  private final String name;
 
   /**
    * Represents a constructor for a mock player used for testing without shots

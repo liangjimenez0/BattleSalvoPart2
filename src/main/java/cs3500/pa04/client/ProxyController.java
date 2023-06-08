@@ -89,7 +89,7 @@ public class ProxyController implements Controller {
    *
    * @param message the MessageJSON used to determine what the server has sent
    */
-  private void delegateMessage(MessageJson message) {
+  private void delegateMessage(MessageJson message) throws IOException {
     String name = message.messageName();
     JsonNode arguments = message.arguments();
 
@@ -107,6 +107,7 @@ public class ProxyController implements Controller {
       handleSuccessfulHits(arguments);
     } else if ("end-game".equals(name)) {
       handleEndGame(arguments);
+      server.close();
     } else {
       throw new IllegalStateException("Invalid message name");
     }
